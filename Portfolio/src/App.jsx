@@ -1,34 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="portfolio">
+      <nav className="navbar">
+        <div className="nav-brand">Elisabeth Bach</div>
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section id="home" className="hero">
+        <h1>Elisabeth Bach</h1>
+        <h2>Frontend Developer</h2>
+        <p></p>
+      </section>
+
+      <section id="about" className="about">
+        <h2>About Me</h2>
+        <div className="about-content">
+          <div className="about-text">
+            <p></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="projects">
+        <h2>Projects</h2>
+        <div className="projects-grid">
+          {/* Project items will go here */}
+          <div className="project-card">
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="skills">
+        <h2>Skills</h2>
+        <div className="skills-grid">
+          <div className="skill-category">
+            <h3>Frontend</h3>
+            <ul>
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <h2>Get In Touch</h2>
+        <div className="contact-content">
+          <a href="mailto:elisabeth95bach@gmail.com">Email Me</a>
+          <a href="https://www.linkedin.com/in/elisabeth-bach/">LinkedIn</a>
+          <a href="https://github.com/EllieBach">GitHub</a>
+        </div>
+      </section>
+    </div>
   )
 }
 
