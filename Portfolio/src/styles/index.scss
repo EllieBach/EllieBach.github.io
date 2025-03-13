@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as *;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -73,5 +73,25 @@ button {
   
   button {
     background-color: $lilac;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  body {
+    min-width: unset;
+  }
+
+  button {
+    padding: 0.5em 1em;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 18px;
   }
 }

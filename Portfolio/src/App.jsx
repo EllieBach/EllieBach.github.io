@@ -1,11 +1,22 @@
 import './styles/App.scss'
+import { useState } from 'react'
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="portfolio">
       <nav className="navbar">
-        <div className="nav-brand">Elisabeth Bach</div>
-        <div className="nav-links">
+        <div className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -24,7 +35,7 @@ function App() {
         <h2>About Me</h2>
         <div className="about-content">
           <div className="about-text">
-            <p></p>
+            <p>I'm a junior Developer</p>
           </div>
         </div>
       </section>
